@@ -47,8 +47,9 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/plugins.min.js"></script>
+    <script src="js/canvas/jquery.js"></script>
+    <script src="js/canvas/plugins.min.js"></script>
+    <script src="js/canvas/functions.js"></script>
 </body>
 
 </html>

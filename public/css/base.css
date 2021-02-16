@@ -1,156 +1,108 @@
-    /*****リセット用CSS*****/
-    * {
-        box-sizing: border-box;
-        /* ヘッダーやフッターを含むすべての要素の高さ＝min-height:100vhになるように指定 */
-    }
+/*****リセット用CSS*****/
+* {
+    box-sizing: border-box;
+    /* ヘッダーやフッターを含むすべての要素の高さ＝min-height:100vhになるように指定 */
+}
 
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
-    /******全体のデザイン******/
-    .all {
-        position: relative;
-        width: 100%;
-        height: auto !important;
-        height: 100%;
-        min-height: 100%; 
-    }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ,
+        Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+}
+/******全体のデザイン******/
+.all {
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+}
 
-    .wrapper {
-        min-height: 100vh;
-        /* コンテンツの高さの最小値＝ブラウザの高さに指定 */
-        position: relative;
-        /* 相対位置 */
-        padding-top: 70px;
-        padding-bottom: 70px;
-        /* ヘッダー、フッターの高さを指定 */
-    }
-    a {
-        text-decoration: none;
-        color: #4b4b4b;
-    }
-    /******ヘッダーデザイン******/
-    header {
-        width: 100%;
-        padding: 10px 10px;
-        z-index:10;
-        background-color: #ffd900;
-        position: fixed;
-        top: 0;
-        display: flex;
-        align-items: center;
-    }
-    header h1 {
-        padding: 0;
-        font-size: 20px;
-        font-weight: bold;
-    }
-    header p {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin-right: 10px;
-    }
-    header ul {
-        list-style: none;
-        margin: 0;
-        display: flex;
-    }
-    header li {
-        margin: 0 0 0 15px;
-        font-size: 14px;
-        font-weight: bold;
-        padding-top: 20px;
-    }
-    header nav {
-        margin: 0 0 0 auto;
-    }
+main h2 {
+    text-align: center;
+    margin: 30px 0 50px 0;
+}
 
-    main h2 {
-        text-align: center;
-        margin: 30px 0 50px 0;
-    }
+main h3 {
+    text-align: center;
+}
 
-    main h3 {
-        text-align: center;
-    }
+.itemCategory {
+    text-align: right;
+}
 
-    .itemCategory {
-        text-align: right;
-    }
+.quantitySelection {
+    margin: 50px 0;
+}
 
-    .quantitySelection {
-        margin: 50px 0;
-    }
+.inputNumber {
+    width: 60px;
+    margin: 0 10px;
+}
 
-    .inputNumber {
-        width: 60px;
-        margin: 0 10px;
-    }
+.itemTable {
+    margin-top: 10px;
+}
 
-    .itemTable {
-        margin-top: 10px;
-    }
+.table-header {
+    background-color: #ffd900;
+}
 
-    .table-header {
-        background-color: #ffd900;
-    }
+/****フッター*******/
+footer {
+    width: 100%;
+    padding: 5px 10px;
+    background-color: #ffd900;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+footer h1 {
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+footer p {
+    text-align: right;
+    font-weight: bold;
+    margin: 0 auto;
+}
 
-    /****フッター*******/
-    footer {
-        width: 100%;
-        padding: 5px 10px;
-        background-color: #ffd900;
-        position: fixed;
-        bottom: 0;
-        z-index: 1000;
-    }
-    footer h1 {
-        padding: 0;
-        font-size: 20px;
-        font-weight: bold;
-    }
-    footer p {
-        text-align: right;
-        font-weight: bold;
-        margin: 0 auto;
-    }
-
-    /***main******/
-    .row{
-        font-size: 14px;
-        line-height: 30px;
-    }
-    .edit-content-title{
-        width: 35%;
-        height: auto;
-        display: inline-block;
-        margin-bottom: 5px;
-        vertical-align: top;
-    }
-    .edit-content-text{
-        width: 60%;
-        height: auto;
-        display: inline-block;
-        margin: 0 0 5px 0;
-    }
-    .title-name{
-        width: 70%;
-        text-align: center;
-        display: inline-block;
-    }
-    .title-name-text{
-        width: 20%;
-        text-align: right;
-        float: right;
-    }
-    .title-address{
-        width: 100%;
-        text-align: right;
-        display: inline-block;
-    }
-    #address-text{
-        line-height: 15px !important;
-    }
+/***main******/
+.row {
+    font-size: 14px;
+    line-height: 30px;
+}
+.edit-content-title {
+    width: 35%;
+    height: auto;
+    display: inline-block;
+    margin-bottom: 5px;
+    vertical-align: top;
+}
+.edit-content-text {
+    width: 60%;
+    height: auto;
+    display: inline-block;
+    margin: 0 0 5px 0;
+}
+.title-name {
+    width: 70%;
+    text-align: center;
+    display: inline-block;
+}
+.title-name-text {
+    width: 20%;
+    text-align: right;
+    float: right;
+}
+.title-address {
+    width: 100%;
+    text-align: right;
+    display: inline-block;
+}
+#address-text {
+    line-height: 15px !important;
+}

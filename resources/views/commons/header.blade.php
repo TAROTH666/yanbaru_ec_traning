@@ -9,7 +9,7 @@
         <div id="logo">
           <a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img
               src="images/logo.png" alt="Canvas Logo"></a>
-          <a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img
+          <a href=" {{ url('/') }} " class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img
               src="images/logo@2x.png" alt="Canvas Logo"></a>
         </div><!-- #logo end -->
 
@@ -23,7 +23,7 @@
           <!-- Top Cart
 							============================================= -->
           <div id="top-cart" class="header-misc-icon d-none d-sm-block">
-            <a href="#" id="top-cart-trigger"><i class="icon-line-bag"></i><span
+            <a href= " {{ url('/cartlist') }} " id="top-cart-trigger"><i class="icon-line-bag"></i><span
                 class="top-cart-number">5</span></a>
             <div class="top-cart-content">
               <div class="top-cart-title">
@@ -61,45 +61,47 @@
               </div>
             </div>
           </div><!-- #top-cart end -->
-
-
         </div>
 
 
         @if (Auth::check())
-        <p>{{ !empty(Auth::user()) ? Auth::user()->last_name . Auth::user()->first_name : 'ユーザー' }} さん</p>
+        {{-- <p>{{ !empty(Auth::user()) ? Auth::user()->last_name . Auth::user()->first_name : 'ユーザー' }} さん</p> --}}
         <nav class="primary-menu">
           <ul class="menu-container">
             <li class="menu-item">
               <a class="menu-link" href=" {{ url('/show') }} ">商品検索</a>
             </li>
             <li class=" menu-item">
-                <a class="menu-link" href=" {{ url('/cartlist') }} "">カート</a>
+                <a class="menu-link" href=" {{ url('/cartlist') }} ">カート</a>
             </li>
             <li class=" menu-item">
-                <a class="menu-link" href=" {{ url('/order-history') }} "">注文履歴</a>
+                <a class="menu-link" href=" {{ url('/order-history') }} ">注文履歴</a>
             </li>
             <li class=" menu-item">
-                <a class="menu-link" href=" {{ url('/user_info') }} "">ユーザ情報</a>
+                <a class="menu-link" href=" {{ url('/user_info') }} ">ユーザ情報</a>
             </li>
             <li class=" menu-item">
-                <a class="menu-link" href=" {{ url('/logout') }} "">ログアウト</a>
+                <a class="menu-link" href=" {{ url('/logout') }} ">ログアウト</a>
             </li>
         </ul>
     </nav>
+    <form class="top-search-form" action="search.html" method="get">
+      <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.."
+        autocomplete="off">
+    </form>
     @else
-    <nav class=" pc-nav">
-      <ul>
+    <nav class="primary-menu">
+      <ul class="menu-container">
         <li class=" menu-item">
-          <a class="menu-link" href=" {{ url('/login') }} "">ログイン</a>
+          <a class="menu-link" href=" {{ url('/login') }} ">ログイン</a>
             </li>
             <li class=" menu-item">
-              <a class="menu-link" href=" {{ url('/signup') }} "">新規登録</a>
+              <a class="menu-link" href=" {{ url('/signup') }} ">新規登録</a>
             </li>
         </ul>
     </nav>
     </div>
-</div>
+  </div>
 </div>
 @endif
 </header>
