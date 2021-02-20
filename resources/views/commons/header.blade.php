@@ -1,4 +1,3 @@
-
 <header id="header" class="full-header">
   <div id="header-wrap">
     <div class="container">
@@ -85,8 +84,9 @@
             </li>
         </ul>
     </nav>
-    <form class="top-search-form" action="search.html" method="get">
-      <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.."
+    {{-- ヘッダー検索フォーム --}}
+    <form class="top-search-form" action="{{ route('searchproduct')}}" method="GET">
+      <input type="text" name="searchWord" class="form-control" value="" placeholder="Type &amp; Hit Enter.."
         autocomplete="off">
     </form>
     @else
