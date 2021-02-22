@@ -48,6 +48,18 @@
                         <div class="col-sm-auto">
                             {!! Form::submit('カートへ', ['class' => 'btn btn-primary']) !!}
                         </div>
+                        <h1>あ</h1>
+                        <br>
+                        <h1>あ</h1>
+                        <br>
+                        <br>
+                        <h1>あ</h1>
+                        <h1>あ</h1>
+                        <h1>あ</h1>
+                        <h1>あ</h1>
+                        <h1>あ</h1>
+                        <h1>あ</h1>
+                        <h1>あ</h1>
                     </div>
                     {!! Form::close() !!}
                 </div>

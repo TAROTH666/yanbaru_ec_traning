@@ -63,7 +63,7 @@ class ProductController extends Controller
         ]);
     }
 
-    //「\\」「%」「_」などの記号を文字としてエスケープさせる
+    //XSS対策「\\」「%」「_」などの記号を文字としてエスケープさせる
     public static function escapeLike($str)
     {
         return str_replace(['\\', '%', '_'], ['\\\\', '\%', '\_'], $str);

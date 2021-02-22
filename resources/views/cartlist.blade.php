@@ -43,6 +43,7 @@
                 </div>
                 <!-- カート内商品 -->
                 <div class="mt-5">
+                    <p>{{ $cartQuantity }}</p>
                     <table class="table border-dark">
                         <thead>
                             <tr class="d-flex border-bottom border-dark">

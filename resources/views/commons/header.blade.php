@@ -6,10 +6,10 @@
       <!-- Logo
       ============================================= -->
         <div id="logo">
-          <a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img
-              src="images/logo.png" alt="Canvas Logo"></a>
-          <a href=" {{ url('/') }} " class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img
-              src="images/logo@2x.png" alt="Canvas Logo"></a>
+          <a href="{{ url('/') }}" class="standard-logo" data-dark-logo="/images/logo-dark.png"><img
+              src="/images/logo.png" alt="Canvas Logo"></a>
+          <a href=" {{ url('/') }} " class="retina-logo" data-dark-logo="/images/logo-dark@2x.png"><img
+              src="/images/logo@2x.png" alt="Canvas Logo"></a>
         </div><!-- #logo end -->
 
         <div class="header-misc">
@@ -22,7 +22,8 @@
           <!-- Top Cart
 							============================================= -->
           <div id="top-cart" class="header-misc-icon d-none d-sm-block">
-            <a href= " {{ url('/cartlist') }} " id="top-cart-trigger"><i class="icon-line-bag"></i><span
+            <a href= " {{ url('/cartlist') }} " id="top-cart-trigger"><i class="icon-line-bag"></i>
+              <span
                 class="top-cart-number">5</span></a>
             <div class="top-cart-content">
               <div class="top-cart-title">
@@ -55,7 +56,7 @@
                 </div>
               </div>
               <div class="top-cart-action">
-                <span class="top-checkout-price">$114.95</span>
+                <span class="top-checkout-price">$114.51</span>
                 <a href="#" class="button button-3d button-small m-0">View Cart</a>
               </div>
             </div>

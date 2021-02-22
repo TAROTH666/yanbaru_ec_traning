@@ -35,8 +35,9 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 |-----------------------------------------------------------------
 */
 Route::get('/', function () {
-    return redirect('/login');
+    return redirect('/home');
 });
+// Route::get('/', 'CartController@count')->name('count');
 
 
 /*
@@ -57,7 +58,7 @@ Route::group(['prefix' => 'seller', 'name' => 'seller.', 'middleware' => ['auth'
 
 /*
 |--------------------------------------------------------------------------
-| 出品者(管理者含む)のみのルーティング
+| 注文履歴のルーティング
 |--------------------------------------------------------------------------
 */
 Route::group(['middleware' => ['auth', 'can:onlyShow']], function () {
@@ -99,7 +100,7 @@ Route::post('/remove', 'UserController@remove')->name('user_remove');
 |-----------------------------------------------------------------
 */
 Route::get('show', 'ProductController@index')->name('show');
-Route::get('searchproduct', 'ProductController@search')->name('searchproduct');
+Route::get('search_product', 'ProductController@search')->name('searchproduct');
 
 /*
 |-----------------------------------------------------------------
@@ -116,7 +117,9 @@ Route::group(["prefix" => 'iteminfo'], function () {
         return view('no_cart_list');
     })->name('noCart');
 });
-Route::get('cartlist', 'CartController@index')->name('cartlist');
+
+
+Route::get('cartlist', 'CartController@index')->name('cartlist')->middleware('auth');
 Route::post('prodinfo/cartListRemove', 'CartController@remove')->name('itemRemove');
 Route::get('noCartList', function () {
     return view('no_cart_list');
