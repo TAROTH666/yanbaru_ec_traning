@@ -123,7 +123,7 @@ class CartController extends Controller
     $cartData = $request->session()->get('cartData');
 
     if (!empty($cartData)) {
-      return redirect()->route('cartlist.index');
+      return redirect()->route('cartlist');
     } else {
       $user = Auth::user();
       return view('no_cart_list', compact('user'));
@@ -162,6 +162,9 @@ class CartController extends Controller
 
     return view('checkout', compact('orderDetail'));
   }
+  /*==================================
+  カート内商品の数を数える処理
+  ==================================*/
   public function count(Request $request)
   {
     $cartData = $request->session()->get('cartData');

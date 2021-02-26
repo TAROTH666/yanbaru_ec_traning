@@ -40,11 +40,13 @@
         <div class="col-xl-4">
           <div class="row align-items-stretch gutter-20 min-vh-25 h-100">
             <div class="col-12 col-md-6 col-xl-12 min-vh-25 min-vh-md-0">
-              <a href="#" class="grid-inner d-block h-100" style="background-image: url('images/shop/banners/7.jpg');"></a>
+              <a href="#" class="grid-inner d-block h-100"
+                style="background-image: url('images/shop/banners/7.jpg');"></a>
             </div>
 
             <div class="col-12 col-md-6 col-xl-12 min-vh-25 min-vh-md-0 pb-xl-0">
-              <a href="#" class="grid-inner d-block h-100" style="background-image: url('images/shop/banners/3.jpg');"></a>
+              <a href="#" class="grid-inner d-block h-100"
+                style="background-image: url('images/shop/banners/3.jpg');"></a>
             </div>
           </div>
         </div>
@@ -52,12 +54,14 @@
 
     </div>
 
-    <div class="promo parallax promo-full bottommargin-lg" style="background-image: url('images/parallax/3.jpg');" data-bottom-top="background-position:0px 300px;" data-top-bottom="background-position:0px -300px;">
+    <div class="promo parallax promo-full bottommargin-lg" style="background-image: url('images/parallax/3.jpg');"
+      data-bottom-top="background-position:0px 300px;" data-top-bottom="background-position:0px -300px;">
       <div class="container clearfix">
         <div class="row align-items-center">
           <div class="col-12 col-lg">
             <h3>Get <span>30%</span> off on orders of $29 or more. Use Coupon: <span>SHOP30</span></h3>
-            <span>Sale available on selected Designer Brands that include Apparels, Footwear, Fashion Accessories &amp; Watches.</span>
+            <span>Sale available on selected Designer Brands that include Apparels, Footwear, Fashion Accessories &amp;
+              Watches.</span>
           </div>
           <div class="col-12 col-lg-auto mt-4 mt-lg-0">
             <a href="#" class="button button-large button-circle m-0">Start Shopping</a>
@@ -127,7 +131,8 @@
                   <div class="entry-meta no-separator">
                     <ul>
                       <li class="color">$29.99</li>
-                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-half-full"></i></li>
+                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i
+                          class="icon-star3"></i><i class="icon-star-half-full"></i></li>
                     </ul>
                   </div>
                 </div>
@@ -148,7 +153,8 @@
                   <div class="entry-meta no-separator">
                     <ul>
                       <li class="color">$23.99</li>
-                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-half-full"></i><i class="icon-star-empty"></i></li>
+                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i
+                          class="icon-star-half-full"></i><i class="icon-star-empty"></i></li>
                     </ul>
                   </div>
                 </div>
@@ -169,7 +175,8 @@
                   <div class="entry-meta no-separator">
                     <ul>
                       <li class="color">$19.99</li>
-                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></li>
+                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i
+                          class="icon-star-empty"></i><i class="icon-star-empty"></i></li>
                     </ul>
                   </div>
                 </div>
@@ -190,7 +197,8 @@
                   <div class="entry-meta no-separator">
                     <ul>
                       <li class="color">$24.99</li>
-                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-empty"></i></li>
+                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i
+                          class="icon-star3"></i><i class="icon-star-empty"></i></li>
                     </ul>
                   </div>
                 </div>
@@ -220,7 +228,8 @@
                   <div class="entry-meta no-separator">
                     <ul>
                       <li class="color">$15</li>
-                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i></li>
+                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i
+                          class="icon-star3"></i><i class="icon-star3"></i></li>
                     </ul>
                   </div>
                 </div>
@@ -241,7 +250,8 @@
                   <div class="entry-meta no-separator">
                     <ul>
                       <li class="color">$19</li>
-                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></li>
+                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-empty"></i><i
+                          class="icon-star-empty"></i><i class="icon-star-empty"></i></li>
                     </ul>
                   </div>
                 </div>
@@ -262,7 +272,8 @@
                   <div class="entry-meta no-separator">
                     <ul>
                       <li class="color">$34.99</li>
-                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-half-full"></i><i class="icon-star-empty"></i></li>
+                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i
+                          class="icon-star-half-full"></i><i class="icon-star-empty"></i></li>
                     </ul>
                   </div>
                 </div>
@@ -283,7 +294,8 @@
                   <div class="entry-meta no-separator">
                     <ul>
                       <li class="color">$17.99</li>
-                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-half-full"></i></li>
+                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i
+                          class="icon-star3"></i><i class="icon-star-half-full"></i></li>
                     </ul>
                   </div>
                 </div>
@@ -313,7 +325,8 @@
                   <div class="entry-meta no-separator">
                     <ul>
                       <li class="color">$21</li>
-                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-half-full"></i></li>
+                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i
+                          class="icon-star3"></i><i class="icon-star-half-full"></i></li>
                     </ul>
                   </div>
                 </div>
@@ -334,7 +347,8 @@
                   <div class="entry-meta no-separator">
                     <ul>
                       <li class="color">$19.99</li>
-                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></li>
+                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i
+                          class="icon-star-empty"></i><i class="icon-star-empty"></i></li>
                     </ul>
                   </div>
                 </div>
@@ -355,7 +369,8 @@
                   <div class="entry-meta no-separator">
                     <ul>
                       <li class="color">$14.99</li>
-                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-half-full"></i><i class="icon-star-empty"></i><i class="icon-star-empty"></i></li>
+                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-half-full"></i><i
+                          class="icon-star-empty"></i><i class="icon-star-empty"></i></li>
                     </ul>
                   </div>
                 </div>
@@ -376,7 +391,8 @@
                   <div class="entry-meta no-separator">
                     <ul>
                       <li class="color">$17.99</li>
-                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-half-full"></i></li>
+                      <li><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i
+                          class="icon-star3"></i><i class="icon-star-half-full"></i></li>
                     </ul>
                   </div>
                 </div>
@@ -387,9 +403,12 @@
 
       </div>
 
-      <div class="clear"></div><div class="line"></div>
+      <div class="clear"></div>
+      <div class="line"></div>
 
-      <div id="oc-clients-full" class="owl-carousel image-carousel carousel-widget" data-margin="30" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="5" data-items-xl="7">
+      <div id="oc-clients-full" class="owl-carousel image-carousel carousel-widget" data-margin="30" data-nav="false"
+        data-autoplay="5000" data-pagi="false" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="5"
+        data-items-xl="7">
 
         <div class="oc-item"><a href="#"><img src="images/clients/logo/1.png" alt="Clients"></a></div>
         <div class="oc-item"><a href="#"><img src="images/clients/logo/2.png" alt="Clients"></a></div>

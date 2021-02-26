@@ -2,8 +2,8 @@
   <div id="header-wrap">
     <div class="container">
       <div class="header-row">
-        
-      <!-- Logo
+
+        <!-- Logo
       ============================================= -->
         <div id="logo">
           <a href="{{ url('/') }}" class="standard-logo" data-dark-logo="/images/logo-dark.png"><img
@@ -22,10 +22,9 @@
           <!-- Top Cart
 							============================================= -->
           <div id="top-cart" class="header-misc-icon d-none d-sm-block">
-            <a href= " {{ url('/cartlist') }} " id="top-cart-trigger"><i class="icon-line-bag"></i>
-              <span
-                class="top-cart-number">5</span></a>
-            <div class="top-cart-content">
+            <a href=" {{ url('/cartlist') }} " id=""><i class="icon-line-bag"></i>
+              {{-- <span class="top-cart-number"></span> --}}</a>
+            {{-- <div class="top-cart-content">
               <div class="top-cart-title">
                 <h4>Shopping Cart</h4>
               </div>
@@ -57,33 +56,33 @@
               </div>
               <div class="top-cart-action">
                 <span class="top-checkout-price">$114.51</span>
-                <a href="#" class="button button-3d button-small m-0">View Cart</a>
-              </div>
-            </div>
-          </div><!-- #top-cart end -->
-        </div>
+                <a href="{{ url('/cartlist') }}" class="button button-3d button-small m-0">View Cart</a>
+          </div>
+        </div> --}}
+      </div><!-- #top-cart end -->
+    </div>
 
 
-        @if (Auth::check())
-        {{-- <p>{{ !empty(Auth::user()) ? Auth::user()->last_name . Auth::user()->first_name : 'ユーザー' }} さん</p> --}}
-        <nav class="primary-menu">
-          <ul class="menu-container">
-            <li class="menu-item">
-              <a class="menu-link" href=" {{ url('/show') }} ">商品検索</a>
-            </li>
-            <li class=" menu-item">
-                <a class="menu-link" href=" {{ url('/cartlist') }} ">カート</a>
-            </li>
-            <li class=" menu-item">
-                <a class="menu-link" href=" {{ url('/order-history') }} ">注文履歴</a>
-            </li>
-            <li class=" menu-item">
-                <a class="menu-link" href=" {{ url('/user_info') }} ">ユーザ情報</a>
-            </li>
-            <li class=" menu-item">
-                <a class="menu-link" href=" {{ url('/logout') }} ">ログアウト</a>
-            </li>
-        </ul>
+    @if (Auth::check())
+    {{-- <p>{{ !empty(Auth::user()) ? Auth::user()->last_name . Auth::user()->first_name : 'ユーザー' }} さん</p> --}}
+    <nav class="primary-menu">
+      <ul class="menu-container">
+        <li class="menu-item">
+          <a class="menu-link" href=" {{ url('/show') }} ">商品検索</a>
+        </li>
+        <li class=" menu-item">
+          <a class="menu-link" href=" {{ url('/cartlist') }} ">カート</a>
+        </li>
+        <li class=" menu-item">
+          <a class="menu-link" href=" {{ url('/order-history') }} ">注文履歴</a>
+        </li>
+        <li class=" menu-item">
+          <a class="menu-link" href=" {{ url('/user_info') }} ">ユーザ情報</a>
+        </li>
+        <li class=" menu-item">
+          <a class="menu-link" href=" {{ url('/logout') }} ">ログアウト</a>
+        </li>
+      </ul>
     </nav>
     {{-- ヘッダー検索フォーム --}}
     <form class="top-search-form" action="{{ route('searchproduct')}}" method="GET">
@@ -95,14 +94,19 @@
       <ul class="menu-container">
         <li class=" menu-item">
           <a class="menu-link" href=" {{ url('/login') }} ">ログイン</a>
-            </li>
-            <li class=" menu-item">
-              <a class="menu-link" href=" {{ url('/signup') }} ">新規登録</a>
-            </li>
-        </ul>
+        </li>
+        <li class=" menu-item">
+          <a class="menu-link" href=" {{ url('/signup') }} ">新規登録</a>
+        </li>
+      </ul>
     </nav>
-    </div>
+    {{-- ヘッダー検索フォーム --}}
+    <form class="top-search-form" action="{{ route('searchproduct')}}" method="GET">
+      <input type="text" name="searchWord" class="form-control" value="" placeholder="Type &amp; Hit Enter.."
+        autocomplete="off">
+    </form>
   </div>
-</div>
-@endif
+  </div>
+  </div>
+  @endif
 </header>

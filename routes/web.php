@@ -35,9 +35,16 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 |-----------------------------------------------------------------
 */
 Route::get('/', function () {
-    return redirect('/home');
+  return redirect('/home');
 });
-// Route::get('/', 'CartController@count')->name('count');
+
+
+// Route::group(['middleware' => ['auth']], function () {
+//   Route::get('/', 'CartController@index')->name('cartlist');
+//   Route::get('/', 'CartController@count')->name('count');
+// });
+
+
 
 
 /*
@@ -46,13 +53,13 @@ Route::get('/', function () {
 |--------------------------------------------------------------------------
 */
 Route::group(['prefix' => 'seller', 'name' => 'seller.', 'middleware' => ['auth', 'can:edit']], function () {
-    Route::resource('items', 'SellerController');
-    Route::get('product/create', 'BackProductController@create')->name('back_product_create');
-    Route::post('product/store', 'BackProductController@store')->name('back_product_store');
-    Route::get('seller_search', 'SellerController@search')->name('seller_search');
-    Route::get('product/edit/{id}', 'BackProductController@edit')->name('back_product_edit');
-    Route::put('product/update/{id}', 'BackProductController@update')->name('back_product_update');
-    Route::delete('product/delete/{id}', 'BackProductController@destroy')->name('back_product_delete');
+  Route::resource('items', 'SellerController');
+  Route::get('product/create', 'BackProductController@create')->name('back_product_create');
+  Route::post('product/store', 'BackProductController@store')->name('back_product_store');
+  Route::get('seller_search', 'SellerController@search')->name('seller_search');
+  Route::get('product/edit/{id}', 'BackProductController@edit')->name('back_product_edit');
+  Route::put('product/update/{id}', 'BackProductController@update')->name('back_product_update');
+  Route::delete('product/delete/{id}', 'BackProductController@destroy')->name('back_product_delete');
 });
 
 
@@ -62,10 +69,10 @@ Route::group(['prefix' => 'seller', 'name' => 'seller.', 'middleware' => ['auth'
 |--------------------------------------------------------------------------
 */
 Route::group(['middleware' => ['auth', 'can:onlyShow']], function () {
-    Route::get('/home', 'HomeController@index')->name('home');
-    Route::get('/order-history', 'OrderController@showOrderHistory')->name('o_history');
-    Route::get('/order-detail/delete', 'OrderController@deleteOrder')->name('delete_order');
-    Route::get('/order-detail', 'OrderController@showOrderDetail')->name('o_detail');
+  Route::get('/home', 'HomeController@index')->name('home');
+  Route::get('/order-history', 'OrderController@showOrderHistory')->name('o_history');
+  Route::get('/order-detail/delete', 'OrderController@deleteOrder')->name('delete_order');
+  Route::get('/order-detail', 'OrderController@showOrderDetail')->name('o_detail');
 });
 
 /*
@@ -73,26 +80,17 @@ Route::group(['middleware' => ['auth', 'can:onlyShow']], function () {
 | ユーザ情報一覧
 |--------------------------------------------------------------------------
 */
-Route::get('/user_info', 'UserController@show')->name('user_info');
+Route::group(['middleware' => ['auth', 'can:onlyShow']], function () {
+  //ユーザ情報表示
+  Route::get('/user_info', 'UserController@show')->name('user_info');
+  //ユーザ情報編集画面
+  Route::get('/user_edit', 'UserController@edit')->name('user_edit');
+  Route::put('/user_update', 'UserController@update')->name('user_update');
 
-/*
-|--------------------------------------------------------------------------
-| ユーザ情報編集
-|--------------------------------------------------------------------------
-*/
-Route::get('/user_edit', 'UserController@edit')->name('user_edit');
-Route::put('/user_update', 'UserController@update')->name('user_update');
-
-
-/*
-|--------------------------------------------------------------------------
-| ユーザ情報削除
-|--------------------------------------------------------------------------
-*/
-Route::get('/delete', 'UserController@delete')->name('user_delete');
-Route::post('/remove', 'UserController@remove')->name('user_remove');
-
-
+  //ユーザ情報削除
+  Route::get('/delete', 'UserController@delete')->name('user_delete');
+  Route::post('/remove', 'UserController@remove')->name('user_remove');
+});
 
 /*
 |-----------------------------------------------------------------
@@ -107,23 +105,23 @@ Route::get('search_product', 'ProductController@search')->name('searchproduct');
 | カート内商品一覧
 |-----------------------------------------------------------------
 */
-Route::resource('cartlist', 'CartController', ['only' => ['index']]);
+// Route::resource('cartlist', 'CartController', ['only' => ['index']]);
 
-Route::group(["prefix" => 'iteminfo'], function () {
-    Route::get('/{id}', 'CartController@show')->name('iteminfo');
-    Route::post('/add', 'CartController@addCart')->name('addcart');
-    Route::post('prodinfo/cartListRemove', 'CartController@remove')->name('itemRemove');
-    Route::get('noCartList', function () {
-        return view('no_cart_list');
-    })->name('noCart');
+Route::group(['middleware' => ['auth', 'can:onlyShow']], function () {
+  Route::post('/add', 'CartController@addCart')->name('addcart');
+  Route::post('prodinfo/cartListRemove', 'CartController@remove')->name('itemRemove');
+  Route::get('noCartList', function () {
+    return view('no_cart_list');
+  })->name('noCart');
+
+  Route::get('cartlist', 'CartController@index')->name('cartlist');
+  Route::post('prodinfo/cartListRemove', 'CartController@remove')->name('itemRemove');
+  Route::get('noCartList', function () {
+    return view('no_cart_list');
+  })->name('noCart');
+  Route::get('checkout', 'CartController@checkout')->name('checkout');
 });
 
-
-Route::get('cartlist', 'CartController@index')->name('cartlist')->middleware('auth');
-Route::post('prodinfo/cartListRemove', 'CartController@remove')->name('itemRemove');
-Route::get('noCartList', function () {
-    return view('no_cart_list');
-})->name('noCart');
-
-
-Route::get('checkout', 'CartController@checkout')->name('checkout');
+Route::group(["prefix" => 'iteminfo'], function () {
+  Route::get('/{id}', 'CartController@show')->name('iteminfo');
+});
